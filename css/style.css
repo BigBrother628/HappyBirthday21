@@ -1570,8 +1570,7 @@ body {
   max-width: 400px;
   margin: 0 auto;
   overflow: hidden;
-  border-radius: 20px;
-  padding: 12px 0;
+  border-radius: 8px;
 }
 
 .gallery-string {
@@ -1588,12 +1587,11 @@ body {
 .gallery-track {
   display: flex;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  padding-top: 12px;
 }
 
 .polaroid {
-  min-width: 100%;
-  padding: 16px 16px 20px;
+  flex: 0 0 100%;
+  padding: 20px 20px 24px;
   background: white;
   border-radius: 4px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
@@ -1601,27 +1599,10 @@ body {
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s var(--smooth);
-  margin: 0 4px;
 }
 
 .polaroid:hover {
   transform: scale(1.02) !important;
-}
-
-.polaroid-img {
-  width: 100%;
-  aspect-ratio: 1;
-  overflow: hidden;
-  border-radius: 2px;
-  background: var(--pink-lightest);
-}
-
-.polaroid-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s var(--smooth);
 }
 
 .polaroid:hover .polaroid-img img {
@@ -1648,6 +1629,24 @@ body {
   font-style: italic;
   line-height: 1.4;
   padding: 0 4px;
+}
+
+.polaroid-img {
+  width: 100%;
+  max-height: 420px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--pink-lightest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.polaroid-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s var(--smooth);
 }
 
 .gallery-btn {
@@ -1775,7 +1774,7 @@ body {
     font-size: 30px;
   }
   .polaroid {
-    padding: 12px 12px 16px;
+    padding: 14px 14px 18px;
   }
   .polaroid-caption {
     font-size: 13px;
@@ -1786,8 +1785,8 @@ body {
     height: 32px;
     font-size: 12px;
   }
-  .gallery-prev { left: 4px; }
-  .gallery-next { right: 4px; }
+  .gallery-prev { left: 6px; }
+  .gallery-next { right: 6px; }
   .player-main {
     gap: 4px;
     padding: 6px 8px;
