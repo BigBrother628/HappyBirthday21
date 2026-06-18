@@ -1,5 +1,11 @@
 let counterInterval = null;
 
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.getElementById('splash-screen').classList.add('hidden');
+  }, 2200);
+});
+
 function initMain() {
   counterInterval = initCounter();
   initLetter();
@@ -9,13 +15,6 @@ function initMain() {
   initFloatingHearts();
   initNav();
   initFireworks();
-  initSplash();
-}
-
-function initSplash() {
-  setTimeout(() => {
-    document.getElementById('splash-screen').classList.add('hidden');
-  }, 2200);
 }
 
 function initNav() {
