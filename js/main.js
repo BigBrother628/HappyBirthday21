@@ -1,10 +1,25 @@
 let counterInterval = null;
 
 document.addEventListener('DOMContentLoaded', () => {
+  const splash = document.createElement('div');
+  splash.id = 'splash-screen';
+  splash.innerHTML = `
+    <div class="splash-content">
+      <div class="splash-heart">💕</div>
+      <h1 class="splash-title">HappyBirthday21</h1>
+      <p class="splash-subtitle">Для тебя, Ангелина ❤️</p>
+      <div class="splash-loader">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  `;
+  document.body.insertBefore(splash, document.body.firstChild);
   setTimeout(() => {
-    const el = document.getElementById('splash-screen');
-    el.classList.add('hidden');
-    el.addEventListener('transitionend', () => { el.style.display = 'none'; }, { once: true });
+    splash.style.opacity = '0';
+    splash.style.visibility = 'hidden';
+    setTimeout(() => {
+      splash.remove();
+    }, 500);
   }, 2200);
 });
 
@@ -47,7 +62,6 @@ function initFloatingHearts() {
 
 function initSecrets() {
   const spot = document.getElementById('secret-spot');
-  const secretText = document.getElementById('secret-text');
   let clickCount = 0;
 
   const messages = [
