@@ -1628,6 +1628,17 @@ body {
   transform: scale(1.05);
 }
 
+.polaroid-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  background: var(--pink-lightest);
+  color: var(--pink);
+}
+
 .polaroid-caption {
   font-family: 'Cormorant Garamond', serif;
   font-size: 15px;
@@ -1847,46 +1858,5 @@ body {
   .nav-btn {
     padding: 6px 8px;
     font-size: 11px;
-  }
-}
-  .hero-title {
-    font-size: 28px;
-  }
-  .hero-name {
-    font-size: 34px;
-  }
-  .auth-card {
-    padding: 32px 24px;
-  }
-  .auth-input {
-    width: 160px;
-    font-size: 18px;
-  }
-  .counter-block {
-    min-width: 65px;
-    padding: 12px 14px;
-  }
-  .counter-num {
-    font-size: 24px;
-  }
-  .memory-grid {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 280px;
-  }
-  .envelope, .letter-paper {
-    width: 240px;
-  }
-  .envelope {
-    height: 170px;
-  }
-  .section-nav {
-    gap: 4px;
-  }
-  .nav-btn {
-    padding: 8px 14px;
-    font-size: 13px;
-  }
-  .letter-body p {
-    font-size: 14px;
   }
 }

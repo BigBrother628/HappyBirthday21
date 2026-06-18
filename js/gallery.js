@@ -22,12 +22,21 @@ function initGallery() {
     card.dataset.index = i;
     const rot = (Math.random() * 6 - 3).toFixed(1);
     card.style.transform = `rotate(${rot}deg)`;
-    card.innerHTML = `
-      <div class="polaroid-img">
-        <img src="${p.file}" alt="Фото ${i + 1}" loading="lazy">
-      </div>
-      <div class="polaroid-caption">${p.caption}</div>
-    `;
+    const img = document.createElement('img');
+    img.src = p.file;
+    img.alt = 'Фото ' + (i + 1);
+    img.loading = 'lazy';
+    img.onerror = function () {
+      this.parentElement.innerHTML = '<div class="polaroid-placeholder">💕</div>';
+    };
+    const imgWrap = document.createElement('div');
+    imgWrap.className = 'polaroid-img';
+    imgWrap.appendChild(img);
+    card.appendChild(imgWrap);
+    const cap = document.createElement('div');
+    cap.className = 'polaroid-caption';
+    cap.textContent = p.caption;
+    card.appendChild(cap);
     track.appendChild(card);
 
     const dot = document.createElement('button');

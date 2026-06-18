@@ -2,7 +2,9 @@ let counterInterval = null;
 
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
-    document.getElementById('splash-screen').classList.add('hidden');
+    const el = document.getElementById('splash-screen');
+    el.classList.add('hidden');
+    el.addEventListener('transitionend', () => { el.style.display = 'none'; }, { once: true });
   }, 2200);
 });
 
