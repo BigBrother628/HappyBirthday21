@@ -4,7 +4,7 @@ function initGallery() {
     { file: base + '/photos/1.jpg', caption: 'Мне так тепло, когда я вижу тебя.' },
     { file: base + '/photos/2.jpg', caption: 'Самая родная и любимая.' },
     { file: base + '/photos/3.jpg', caption: 'Пусть всё вокруг будет таким же прекрасным, как ты на этом снимке.' },
-    { file: base + '/photos/4.jpg', caption: 'всё остальное вокруг меркнет, когда ты улыбаешься' },
+    { file: base + '/photos/4.jpg', caption: 'Всё остальное вокруг меркнет по сравнению с тобой.' },
     { file: base + '/photos/5.jpg', caption: 'Ты делаешь этот мир (и мою галерею) лучше.' },
     { file: base + '/photos/6.jpg', caption: 'Мой шайлушайчик.' },
     { file: base + '/photos/7.jpg', caption: 'Мне так тепло, когда я вижу тебя.' },
